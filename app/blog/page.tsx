@@ -11,6 +11,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import LayoutWrapper, { useLanguage } from "@/components/layout-wrapper"
 import { getBlogPosts, getBlogCategories, searchPosts, getPostsByCategory, getFeaturedPosts } from "@/lib/blog-data"
 
+
+// FIXME: We add blog page when needed
 const translations = {
   en: {
     hero: {

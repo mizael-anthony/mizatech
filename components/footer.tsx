@@ -14,7 +14,6 @@ const translations = {
     home: "Home",
     services: "Services",
     about: "About",
-    blog: "Blog",
     contact: "Contact",
     legal: "Legal Notice",
     privacy: "Privacy Policy",
@@ -31,7 +30,6 @@ const translations = {
     home: "Accueil",
     services: "Services",
     about: "À propos",
-    blog: "Blog",
     contact: "Contact",
     legal: "Mentions Légales",
     privacy: "Politique de Confidentialité",
@@ -79,9 +77,6 @@ export default function Footer({ currentLang }: FooterProps) {
               </Link>
               <Link href="/about" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
                 {t.about}
-              </Link>
-              <Link href="/blog" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
-                {t.blog}
               </Link>
               <Link href="/contact" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
                 {t.contact}

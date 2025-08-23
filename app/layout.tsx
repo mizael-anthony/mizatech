@@ -15,7 +15,6 @@ export const metadata: Metadata = {
     "Specialized in web & mobile development, API creation, and AI integration. Transform your ideas into powerful, scalable technology solutions.",
   keywords: "web development, mobile development, API development, AI integration, technology solutions",
   authors: [{ name: "Mizatech" }],
-  generator: 'v0.dev',
   icons: {
     icon: '/images/favicon.ico',
     shortcut: '/images/favicon.ico',

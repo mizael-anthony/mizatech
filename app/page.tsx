@@ -14,7 +14,7 @@ const translations = {
       subtitle:
         "Specialized in web & mobile development, API creation, and AI integration. We transform your ideas into powerful, scalable technology solutions.",
       cta: "Get a Quote",
-      ctaSecondary: "View Our Work",
+      ctaSecondary: "Schedule Call",
     },
     services: {
       title: "Our Expertise",
@@ -56,7 +56,7 @@ const translations = {
       subtitle:
         "Spécialisés dans le développement web et mobile, la création d'API et l'intégration IA. Nous transformons vos idées en solutions technologiques puissantes et évolutives.",
       cta: "Obtenir un devis",
-      ctaSecondary: "Voir nos réalisations",
+      ctaSecondary: "Planifier Appel",
     },
     services: {
       title: "Notre Expertise",
@@ -128,7 +128,7 @@ function HomePage() {
                 size="lg"
                 className="border-gray-600 text-gray-300 hover:bg-gray-800 rounded-lg px-8 py-4 font-semibold bg-transparent"
               >
-                <Link href="/services">{t.hero.ctaSecondary}</Link>
+                <Link href="/schedule">{t.hero.ctaSecondary}</Link>
               </Button>
             </div>
           </div>
