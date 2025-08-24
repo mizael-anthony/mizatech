@@ -80,6 +80,13 @@ export default function Navigation({ currentLang, onLanguageChange }: Navigation
               <Globe className="w-4 h-4" />
               <span className="text-sm font-medium">{currentLang === "en" ? "FR" : "EN"}</span>
             </Button>
+
+            <Button
+              asChild
+              className="hidden md:flex bg-orange-600 hover:bg-orange-700 text-white rounded-lg px-6 py-2 font-medium shadow-sm"
+            >
+              <Link href="/contact">{t.getQuote}</Link>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
