@@ -27,6 +27,11 @@ const technologiesByCategory = {
       icon: "https://go-skill-icons.vercel.app/api/icons?i=django",
       color: "bg-green-50 border-green-200 hover:bg-green-100"
     },
+        { 
+      name: "Ruby on Rails", 
+      icon: "https://go-skill-icons.vercel.app/api/icons?i=rails",
+      color: "bg-red-50 border-red-200 hover:bg-red-100"
+    },
   ],
   Mobile: [
     { 
@@ -34,6 +39,11 @@ const technologiesByCategory = {
       icon: "https://go-skill-icons.vercel.app/api/icons?i=react",
       color: "bg-blue-50 border-blue-200 hover:bg-blue-100"
     },
+    {
+      name: "Expo",
+      icon: "https://go-skill-icons.vercel.app/api/icons?i=expo",
+      color: "bg-blue-50 border-blue-200 hover:bg-blue-100"
+    }
   ],
   API: [
     { 
@@ -42,9 +52,9 @@ const technologiesByCategory = {
       color: "bg-green-50 border-green-200 hover:bg-green-100"
     },
     { 
-      name: "Ruby on Rails", 
-      icon: "https://go-skill-icons.vercel.app/api/icons?i=rails",
-      color: "bg-red-50 border-red-200 hover:bg-red-100"
+      name: "GraphQL", 
+      icon: "https://go-skill-icons.vercel.app/api/icons?i=graphql",
+      color: "bg-green-50 border-green-200 hover:bg-green-100"
     },
   ],
   Database: [
@@ -59,15 +69,15 @@ const technologiesByCategory = {
       color: "bg-blue-50 border-blue-200 hover:bg-blue-100"
     },
   ],
-  IA: [
+  Cloud: [
     { 
-      name: "Lovable", 
-      icon: "/techno/lovable.png",
+      name: "Vercel",
+      icon: "https://go-skill-icons.vercel.app/api/icons?i=vercel",
       color: "bg-purple-50 border-purple-200 hover:bg-purple-100"
     },
     {
-      name: "Bolt",
-      icon: "/techno/bolt.png",
+      name: "Cloudflare",
+      icon: "https://go-skill-icons.vercel.app/api/icons?i=cloudflare",
       color: "bg-purple-50 border-purple-200 hover:bg-purple-100"
     }
   ],
@@ -78,8 +88,13 @@ const technologiesByCategory = {
       color: "bg-pink-50 border-pink-200 hover:bg-pink-100"
     },
     {
-      name: "Github",
-      icon: "https://go-skill-icons.vercel.app/api/icons?i=github",
+      name: "Figma",
+      icon: "https://go-skill-icons.vercel.app/api/icons?i=figma",
+      color: "bg-blue-50 border-blue-200 hover:bg-blue-100"
+    },
+    {
+      name: "Discord",
+      icon: "https://go-skill-icons.vercel.app/api/icons?i=discord",
       color: "bg-blue-50 border-blue-200 hover:bg-blue-100"
     },
   ],

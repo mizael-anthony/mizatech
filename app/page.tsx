@@ -1,7 +1,6 @@
 import LayoutWrapper from "@/components/layout-wrapper"
 import HeroSection from "@/components/hero-section"
 import ServicesSection from "@/components/services-section"
-import StatsSection from "@/components/stats-section"
 import TechnologiesSection from "@/components/technologies-section"
 import FAQSection from "@/components/faq-section"
 import CTASection from "@/components/cta-section"
@@ -51,24 +50,16 @@ const translations = {
       subtitle: "Get answers to common questions about our services and development process.",
       items: [
         {
-          question: "How long does a typical project take?",
-          answer: "Project timelines vary depending on complexity and scope. Simple websites typically take 2-4 weeks, while complex web applications can take 2-6 months. We'll provide a detailed timeline during our initial consultation."
+          question: "How long does an MVP development take?",
+          answer: "Our MVP development process typically takes 14 days from contract signature. This streamlined timeline ensures rapid time-to-market while maintaining high quality standards."
         },
         {
           question: "Do you provide ongoing support and maintenance?",
-          answer: "Yes, we offer comprehensive support and maintenance packages to ensure your application stays secure, up-to-date, and performing optimally. This includes regular updates, security patches, and technical support."
+          answer: "Yes, we offer comprehensive support and maintenance packages to ensure your application remains secure, up-to-date, and performing optimally. Our services include regular updates, security patches, performance monitoring, and dedicated technical support."
         },
         {
-          question: "What technologies do you specialize in?",
-          answer: "We work with modern technologies including React, Next.js, Node.js, Python, React Native, and various cloud platforms. We choose the best tech stack based on your specific requirements and long-term goals."
-        },
-        {
-          question: "Can you integrate AI into existing systems?",
-          answer: "Absolutely! We specialize in integrating AI and machine learning solutions into existing applications. Whether it's chatbots, data analysis, or automation, we can enhance your current systems with intelligent features."
-        },
-        {
-          question: "What is your development process?",
-          answer: "We follow an agile development approach with regular communication and updates. Our process includes discovery, planning, design, development, testing, and deployment phases, with client feedback incorporated throughout."
+          question: "What if I don't have a clear project vision?",
+          answer: "Absolutely. We specialize in discovery workshops and requirements analysis. Our team will work closely with you to define your project scope, identify key objectives, and develop a comprehensive solution strategy that exceeds your expectations."
         }
       ]
     },
@@ -124,24 +115,16 @@ const translations = {
       subtitle: "Obtenez des réponses aux questions courantes sur nos services et notre processus de développement.",
       items: [
         {
-          question: "Combien de temps prend un projet typique ?",
-          answer: "Les délais des projets varient selon la complexité et l'étendue. Les sites web simples prennent généralement 2 à 4 semaines, tandis que les applications web complexes peuvent prendre 2 à 6 mois. Nous fournirons un calendrier détaillé lors de notre consultation initiale."
+          question: "Combien de temps prend le développement d'un MVP ?",
+          answer: "Notre processus de développement MVP prend généralement 14 jours à partir de la signature du contrat. Ce délai optimisé garantit une mise sur le marché rapide tout en maintenant des standards de qualité élevés."
         },
         {
           question: "Fournissez-vous un support et une maintenance continus ?",
-          answer: "Oui, nous offrons des forfaits complets de support et de maintenance pour garantir que votre application reste sécurisée, à jour et performante. Cela inclut les mises à jour régulières, les correctifs de sécurité et le support technique."
+          answer: "Oui, nous offrons des packages complets de support et maintenance pour garantir que votre application reste sécurisée, à jour et performante. Nos services incluent des mises à jour régulières, des correctifs de sécurité, la surveillance des performances et un support technique dédié."
         },
         {
-          question: "Dans quelles technologies vous spécialisez-vous ?",
-          answer: "Nous travaillons avec des technologies modernes incluant React, Next.js, Node.js, Python, React Native, et diverses plateformes cloud. Nous choisissons la meilleure pile technologique basée sur vos besoins spécifiques et objectifs à long terme."
-        },
-        {
-          question: "Pouvez-vous intégrer l'IA dans les systèmes existants ?",
-          answer: "Absolument ! Nous nous spécialisons dans l'intégration de solutions d'IA et d'apprentissage automatique dans les applications existantes. Qu'il s'agisse de chatbots, d'analyse de données ou d'automatisation, nous pouvons améliorer vos systèmes actuels avec des fonctionnalités intelligentes."
-        },
-        {
-          question: "Quel est votre processus de développement ?",
-          answer: "Nous suivons une approche de développement agile avec une communication et des mises à jour régulières. Notre processus comprend les phases de découverte, planification, conception, développement, test et déploiement, avec les commentaires des clients intégrés tout au long."
+          question: "Que faire si je n'ai pas une vision claire de mon projet ?",
+          answer: "Absolument. Nous nous spécialisons dans les ateliers de découverte et l'analyse des exigences. Notre équipe travaillera étroitement avec vous pour définir la portée de votre projet, identifier les objectifs clés et développer une stratégie de solution complète qui dépasse vos attentes."
         }
       ]
     },
