@@ -19,7 +19,6 @@ const translations = {
     blog: "Blog",
     contact: "Contact",
     legal: "Legal",
-    schedule: "Schedule Call",
     getQuote: "Get a Quote",
   },
   fr: {
@@ -29,7 +28,6 @@ const translations = {
     blog: "Blog",
     contact: "Contact",
     legal: "Légal",
-    schedule: "Planifier Appel",
     getQuote: "Obtenir un devis",
   },
 }
@@ -82,26 +80,10 @@ export default function Navigation({ currentLang, onLanguageChange }: Navigation
               <Globe className="w-4 h-4" />
               <span className="text-sm font-medium">{currentLang === "en" ? "FR" : "EN"}</span>
             </Button>
-
-            <Button
-              asChild
-              className="bg-orange-600 hover:bg-orange-700 text-white rounded-lg px-6 py-2 font-medium shadow-sm"
-            >
-              <Link href="/contact">{t.getQuote}</Link>
-            </Button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => onLanguageChange(currentLang === "en" ? "fr" : "en")}
-              className="flex items-center space-x-1 text-gray-600"
-            >
-              <Globe className="w-4 h-4" />
-              <span className="text-sm">{currentLang === "en" ? "FR" : "EN"}</span>
-            </Button>
+          <div className="md:hidden">
             <Button variant="ghost" size="sm" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
@@ -124,12 +106,15 @@ export default function Navigation({ currentLang, onLanguageChange }: Navigation
               <Link href="/contact" className="text-gray-700 hover:text-orange-600 font-medium">
                 {t.contact}
               </Link>
-              <Button
-                asChild
-                className="bg-orange-600 hover:bg-orange-700 text-white rounded-lg w-fit px-6 py-2 font-medium"
-              >
-                <Link href="/contact">{t.getQuote}</Link>
-              </Button>
+              
+              <div className="flex items-center justify-between pt-2">
+                <Button
+                  asChild
+                  className="bg-orange-600 hover:bg-orange-700 text-white rounded-lg px-6 py-2 font-medium"
+                >
+                  <Link href="/contact">{t.getQuote}</Link>
+                </Button>
+              </div>
             </div>
           </div>
         )}
