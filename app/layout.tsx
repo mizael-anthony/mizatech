@@ -12,8 +12,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Mizatech - Modern Technology Solutions",
   description:
-    "Specialized in web & mobile development, API creation, and AI integration. Transform your ideas into powerful, scalable technology solutions.",
-  keywords: "web development, mobile development, API development, AI integration, technology solutions",
+    "Specialized in web & mobile development, API development. Transform your ideas into powerful, scalable technology solutions.",
+  keywords: "web development, mobile development, API development, technology solutions",
   authors: [{ name: "Mizatech" }],
   icons: {
     icon: '/images/favicon.ico',

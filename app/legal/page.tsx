@@ -16,8 +16,6 @@ const translations = {
       terms: "Terms of Service",
       privacy: "Privacy Policy",
       cookies: "Cookie Policy",
-      disclaimer: "Disclaimer",
-      contact: "Legal Contact",
     },
     companyInfo: {
       title: "Company Information",
@@ -133,8 +131,6 @@ const translations = {
       terms: "Conditions d'Utilisation",
       privacy: "Politique de Confidentialité",
       cookies: "Politique des Cookies",
-      disclaimer: "Avertissement",
-      contact: "Contact Légal",
     },
     companyInfo: {
       title: "Informations sur l'Entreprise",
@@ -295,18 +291,6 @@ function LegalPage() {
                   >
                     {t.navigation.cookies}
                   </button>
-                  <button
-                    onClick={() => scrollToSection("disclaimer")}
-                    className="block w-full text-left text-gray-600 hover:text-orange-600 transition-colors text-sm py-2 px-3 rounded-lg hover:bg-orange-50"
-                  >
-                    {t.navigation.disclaimer}
-                  </button>
-                  <button
-                    onClick={() => scrollToSection("legal-contact")}
-                    className="block w-full text-left text-gray-600 hover:text-orange-600 transition-colors text-sm py-2 px-3 rounded-lg hover:bg-orange-50"
-                  >
-                    {t.navigation.contact}
-                  </button>
                 </nav>
               </CardContent>
             </Card>
@@ -405,44 +389,6 @@ function LegalPage() {
                 </CardHeader>
                 <CardContent className="p-8 pt-0">
                   <p className="text-gray-700 leading-relaxed">{t.cookies.content}</p>
-                </CardContent>
-              </Card>
-            </section>
-
-            {/* Disclaimer */}
-            <section id="disclaimer">
-              <Card className="border-0 shadow-lg rounded-xl">
-                <CardHeader className="p-8">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                      <FileText className="w-6 h-6 text-orange-600" />
-                    </div>
-                    <CardTitle className="text-2xl font-bold text-gray-900">{t.disclaimer.title}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="p-8 pt-0">
-                  <p className="text-gray-700 leading-relaxed">{t.disclaimer.content}</p>
-                </CardContent>
-              </Card>
-            </section>
-
-            {/* Legal Contact */}
-            <section id="legal-contact">
-              <Card className="border-0 shadow-lg rounded-xl">
-                <CardHeader className="p-8">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-orange-600" />
-                    </div>
-                    <CardTitle className="text-2xl font-bold text-gray-900">{t.legalContact.title}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="p-8 pt-0">
-                  <p className="text-gray-700 leading-relaxed mb-4">{t.legalContact.content}</p>
-                  <div className="space-y-2">
-                    <p className="text-gray-700 font-medium">{t.legalContact.email}</p>
-                    <p className="text-gray-700">{t.legalContact.address}</p>
-                  </div>
                 </CardContent>
               </Card>
             </section>

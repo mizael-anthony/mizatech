@@ -85,15 +85,6 @@ export default function Navigation({ currentLang, onLanguageChange }: Navigation
 
             <Button
               asChild
-              variant="outline"
-              size="sm"
-              className="border-orange-600 text-orange-600 hover:bg-orange-50 rounded-lg px-4 py-2 font-medium"
-            >
-              <Link href="/schedule">{t.schedule}</Link>
-            </Button>
-
-            <Button
-              asChild
               className="bg-orange-600 hover:bg-orange-700 text-white rounded-lg px-6 py-2 font-medium shadow-sm"
             >
               <Link href="/contact">{t.getQuote}</Link>
@@ -133,13 +124,6 @@ export default function Navigation({ currentLang, onLanguageChange }: Navigation
               <Link href="/contact" className="text-gray-700 hover:text-orange-600 font-medium">
                 {t.contact}
               </Link>
-              <Button
-                asChild
-                variant="outline"
-                className="border-orange-600 text-orange-600 hover:bg-orange-50 rounded-lg w-fit px-6 py-2 font-medium"
-              >
-                <Link href="/schedule">{t.schedule}</Link>
-              </Button>
               <Button
                 asChild
                 className="bg-orange-600 hover:bg-orange-700 text-white rounded-lg w-fit px-6 py-2 font-medium"

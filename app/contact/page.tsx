@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react"
+import { Send, CheckCircle, Calendar, Clock, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -11,6 +11,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import LayoutWrapper, { useLanguage } from "@/components/layout-wrapper"
+import Link from "next/link"
 
 const translations = {
   en: {
@@ -43,12 +44,12 @@ const translations = {
       success: "Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.",
       error: "Sorry, there was an error sending your message. Please try again.",
     },
-    contact: {
-      title: "Contact Information",
-      email: "hello@mizatech.com",
-      phone: "+1 (555) 123-4567",
-      address: "Tech District, Innovation City",
-      hours: "Monday - Friday: 9:00 AM - 6:00 PM",
+    schedule: {
+      title: "Book Your Free Consultation",
+      subtitle: "Choose a time that works best for you. All consultations are completely free with no obligations.",
+      bookNow: "Schedule Now",
+      duration: "30 minutes",
+      price: "Free consultation",
     },
   },
   fr: {
@@ -82,12 +83,12 @@ const translations = {
       success: "Merci ! Votre message a été envoyé avec succès. Nous vous répondrons dans les 24 heures.",
       error: "Désolé, il y a eu une erreur lors de l'envoi de votre message. Veuillez réessayer.",
     },
-    contact: {
-      title: "Informations de Contact",
-      email: "hello@mizatech.com",
-      phone: "+1 (555) 123-4567",
-      address: "Quartier Tech, Ville Innovation",
-      hours: "Lundi - Vendredi : 9h00 - 18h00",
+    schedule: {
+      title: "Réservez Votre Consultation Gratuite",
+      subtitle: "Choisissez une heure qui vous convient le mieux. Toutes les consultations sont entièrement gratuites et sans obligation.",
+      bookNow: "Planifier Maintenant",
+      duration: "30 minutes",
+      price: "Consultation gratuite",
     },
   },
 }
@@ -147,9 +148,9 @@ function ContactPage() {
       {/* Contact Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="lg:col-span-2">
+            <div>
               <Card className="border-0 shadow-lg rounded-xl">
                 <CardHeader className="p-8">
                   <CardTitle className="text-2xl font-bold text-gray-900">{t.form.title}</CardTitle>
@@ -277,50 +278,39 @@ function ContactPage() {
               </Card>
             </div>
 
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <Card className="border-0 shadow-lg rounded-xl">
-                <CardHeader className="p-6">
-                  <CardTitle className="text-xl font-bold text-gray-900">{t.contact.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="p-6 pt-0 space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-5 h-5 text-orange-600" />
+            {/* Scheduling Section */}
+            <div>
+              <Card className="border-0 shadow-xl rounded-2xl overflow-hidden">
+                <CardContent className="p-12 text-center">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">{t.schedule.title}</h2>
+                  <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">{t.schedule.subtitle}</p>
+                  
+                  <div className="flex justify-center items-center space-x-8 mb-8 text-gray-600">
+                    <div className="flex items-center space-x-2">
+                      <Clock className="w-5 h-5 text-orange-600" />
+                      <span>{t.schedule.duration}</span>
                     </div>
-                    <div>
-                      <p className="font-medium text-gray-900">Email</p>
-                      <p className="text-gray-600">{t.contact.email}</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-5 h-5 text-orange-600" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-gray-900">Phone</p>
-                      <p className="text-gray-600">{t.contact.phone}</p>
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="w-5 h-5 text-green-600" />
+                      <span>{t.schedule.price}</span>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-5 h-5 text-orange-600" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-gray-900">Address</p>
-                      <p className="text-gray-600">{t.contact.address}</p>
-                    </div>
-                  </div>
-
-                  <div className="pt-6 border-t border-gray-100">
-                    <p className="text-sm text-gray-600">
-                      <strong>Business Hours:</strong>
-                      <br />
-                      {t.contact.hours}
-                    </p>
-                  </div>
+                  <Button
+                    asChild
+                    size="lg"
+                    className="bg-orange-600 hover:bg-orange-700 text-white rounded-lg px-12 py-4 font-semibold text-lg shadow-lg"
+                  >
+                    <Link
+                      href="https://cal.com/mizael-anthony/30min"
+                      target="_blank"
+                      className="flex items-center"
+                    >
+                      <Calendar className="w-5 h-5 mr-2" />
+                      {t.schedule.bookNow}
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </Link>
+                  </Button>
                 </CardContent>
               </Card>
             </div>
