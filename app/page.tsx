@@ -1,10 +1,9 @@
-"use client"
-
-import Link from "next/link"
-import { ArrowRight, Code, Smartphone, Zap, Shield } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import LayoutWrapper, { useLanguage } from "@/components/layout-wrapper"
+import LayoutWrapper from "@/components/layout-wrapper"
+import HeroSection from "@/components/hero-section"
+import ServicesSection from "@/components/services-section"
+import TechnologiesSection from "@/components/technologies-section"
+import FAQSection from "@/components/faq-section"
+import CTASection from "@/components/cta-section"
 
 const translations = {
   en: {
@@ -14,7 +13,6 @@ const translations = {
       subtitle:
         "Specialized in web & mobile development, API creation, and AI integration. We transform your ideas into powerful, scalable technology solutions.",
       cta: "Get a Quote",
-      ctaSecondary: "View Our Work",
     },
     services: {
       title: "Our Expertise",
@@ -43,6 +41,28 @@ const translations = {
       experience: "Years Experience",
       satisfaction: "Client Satisfaction",
     },
+    technologies: {
+      title: "Technologies We Use",
+      subtitle: "We work with modern, industry-leading technologies to deliver robust and scalable solutions.",
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      subtitle: "Get answers to common questions about our services and development process.",
+      items: [
+        {
+          question: "How long does an MVP development take?",
+          answer: "Our MVP development process typically takes 14 days from contract signature. This streamlined timeline ensures rapid time-to-market while maintaining high quality standards."
+        },
+        {
+          question: "Do you provide ongoing support and maintenance?",
+          answer: "Yes, we offer comprehensive support and maintenance packages to ensure your application remains secure, up-to-date, and performing optimally. Our services include regular updates, security patches, performance monitoring, and dedicated technical support."
+        },
+        {
+          question: "What if I don't have a clear project vision?",
+          answer: "Absolutely. We specialize in discovery workshops and requirements analysis. Our team will work closely with you to define your project scope, identify key objectives, and develop a comprehensive solution strategy that exceeds your expectations."
+        }
+      ]
+    },
     cta: {
       title: "Ready to Start Your Project?",
       subtitle: "Let's discuss how we can help bring your vision to life with cutting-edge technology solutions.",
@@ -56,7 +76,6 @@ const translations = {
       subtitle:
         "Spécialisés dans le développement web et mobile, la création d'API et l'intégration IA. Nous transformons vos idées en solutions technologiques puissantes et évolutives.",
       cta: "Obtenir un devis",
-      ctaSecondary: "Voir nos réalisations",
     },
     services: {
       title: "Notre Expertise",
@@ -87,6 +106,28 @@ const translations = {
       experience: "Années d'Expérience",
       satisfaction: "Satisfaction Client",
     },
+    technologies: {
+      title: "Technologies Utilisées",
+      subtitle: "Nous travaillons avec des technologies modernes et reconnues pour fournir des solutions robustes et évolutives.",
+    },
+    faq: {
+      title: "Questions Fréquemment Posées",
+      subtitle: "Obtenez des réponses aux questions courantes sur nos services et notre processus de développement.",
+      items: [
+        {
+          question: "Combien de temps prend le développement d'un MVP ?",
+          answer: "Notre processus de développement MVP prend généralement 14 jours à partir de la signature du contrat. Ce délai optimisé garantit une mise sur le marché rapide tout en maintenant des standards de qualité élevés."
+        },
+        {
+          question: "Fournissez-vous un support et une maintenance continus ?",
+          answer: "Oui, nous offrons des packages complets de support et maintenance pour garantir que votre application reste sécurisée, à jour et performante. Nos services incluent des mises à jour régulières, des correctifs de sécurité, la surveillance des performances et un support technique dédié."
+        },
+        {
+          question: "Que faire si je n'ai pas une vision claire de mon projet ?",
+          answer: "Absolument. Nous nous spécialisons dans les ateliers de découverte et l'analyse des exigences. Notre équipe travaillera étroitement avec vous pour définir la portée de votre projet, identifier les objectifs clés et développer une stratégie de solution complète qui dépasse vos attentes."
+        }
+      ]
+    },
     cta: {
       title: "Prêt à Démarrer Votre Projet ?",
       subtitle:
@@ -97,141 +138,43 @@ const translations = {
 }
 
 function HomePage() {
-  const { currentLang } = useLanguage()
-  const t = translations[currentLang]
+  const heroTranslations = {
+    en: translations.en.hero,
+    fr: translations.fr.hero,
+  }
+
+  const servicesTranslations = {
+    en: translations.en.services,
+    fr: translations.fr.services,
+  }
+
+  const statsTranslations = {
+    en: translations.en.stats,
+    fr: translations.fr.stats,
+  }
+
+  const technologiesTranslations = {
+    en: translations.en.technologies,
+    fr: translations.fr.technologies,
+  }
+
+  const faqTranslations = {
+    en: translations.en.faq,
+    fr: translations.fr.faq,
+  }
+
+  const ctaTranslations = {
+    en: translations.en.cta,
+    fr: translations.fr.cta,
+  }
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-600/10 to-transparent"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-          <div className="max-w-4xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              {t.hero.title} <span className="text-orange-400">{t.hero.titleAccent}</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl">{t.hero.subtitle}</p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                asChild
-                size="lg"
-                className="bg-orange-600 hover:bg-orange-700 text-white rounded-lg px-8 py-4 font-semibold shadow-lg"
-              >
-                <Link href="/contact" className="flex items-center">
-                  {t.hero.cta}
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-gray-600 text-gray-300 hover:bg-gray-800 rounded-lg px-8 py-4 font-semibold bg-transparent"
-              >
-                <Link href="/services">{t.hero.ctaSecondary}</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{t.services.title}</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t.services.subtitle}</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-xl">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Code className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{t.services.web.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{t.services.web.description}</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-xl">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Smartphone className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{t.services.mobile.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{t.services.mobile.description}</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-xl">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Shield className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{t.services.api.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{t.services.api.description}</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-xl">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Zap className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{t.services.ai.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{t.services.ai.description}</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{t.stats.title}</h2>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-bold text-orange-600 mb-2">50+</div>
-              <div className="text-gray-600 font-medium">{t.stats.projects}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-bold text-orange-600 mb-2">30+</div>
-              <div className="text-gray-600 font-medium">{t.stats.clients}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-bold text-orange-600 mb-2">5+</div>
-              <div className="text-gray-600 font-medium">{t.stats.experience}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-bold text-orange-600 mb-2">98%</div>
-              <div className="text-gray-600 font-medium">{t.stats.satisfaction}</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">{t.cta.title}</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{t.cta.subtitle}</p>
-          <Button
-            asChild
-            size="lg"
-            className="bg-orange-600 hover:bg-orange-700 text-white rounded-lg px-8 py-4 font-semibold shadow-lg"
-          >
-            <Link href="/contact" className="flex items-center">
-              {t.cta.button}
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </Button>
-        </div>
-      </section>
+      <HeroSection translations={heroTranslations} />
+      <ServicesSection translations={servicesTranslations} />
+      <TechnologiesSection translations={technologiesTranslations} />
+      <FAQSection translations={faqTranslations} />
+      <CTASection translations={ctaTranslations} />
     </div>
   )
 }

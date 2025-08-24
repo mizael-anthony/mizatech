@@ -14,14 +14,13 @@ const translations = {
     home: "Home",
     services: "Services",
     about: "About",
-    blog: "Blog",
     contact: "Contact",
     legal: "Legal Notice",
     privacy: "Privacy Policy",
     terms: "Terms of Service",
     getInTouch: "Get in Touch",
-    email: "hello@mizatech.com",
-    phone: "+1 (555) 123-4567",
+    email: "mizatech@mizael.pro",
+    phone: "+33 6 12 34 56 78",
     address: "Tech District, Innovation City",
     rights: "All rights reserved.",
     tagline: "Building the future, one line of code at a time.",
@@ -31,15 +30,14 @@ const translations = {
     home: "Accueil",
     services: "Services",
     about: "À propos",
-    blog: "Blog",
     contact: "Contact",
     legal: "Mentions Légales",
     privacy: "Politique de Confidentialité",
     terms: "Conditions d'Utilisation",
     getInTouch: "Nous contacter",
-    email: "hello@mizatech.com",
-    phone: "+1 (555) 123-4567",
-    address: "Quartier Tech, Ville Innovation",
+    email: "mizatech@mizael.pro",
+    phone: "+33 6 12 34 56 78",
+    address: "123 Rue de la Technologie, Ville Innovation",
     rights: "Tous droits réservés.",
     tagline: "Construire l'avenir, une ligne de code à la fois.",
   },
@@ -79,9 +77,6 @@ export default function Footer({ currentLang }: FooterProps) {
               </Link>
               <Link href="/about" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
                 {t.about}
-              </Link>
-              <Link href="/blog" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
-                {t.blog}
               </Link>
               <Link href="/contact" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
                 {t.contact}

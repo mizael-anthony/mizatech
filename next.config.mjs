@@ -8,6 +8,14 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'go-skill-icons.vercel.app',
+        port: '',
+        pathname: '/api/icons/**',
+      },
+    ],
   },
 }
 

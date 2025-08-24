@@ -19,6 +19,7 @@ const translations = {
     blog: "Blog",
     contact: "Contact",
     legal: "Legal",
+    schedule: "Schedule Call",
     getQuote: "Get a Quote",
   },
   fr: {
@@ -28,6 +29,7 @@ const translations = {
     blog: "Blog",
     contact: "Contact",
     legal: "Légal",
+    schedule: "Planifier Appel",
     getQuote: "Obtenir un devis",
   },
 }
@@ -63,15 +65,12 @@ export default function Navigation({ currentLang, onLanguageChange }: Navigation
             <Link href="/about" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
               {t.about}
             </Link>
-            <Link href="/blog" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
-              {t.blog}
-            </Link>
             <Link href="/contact" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
               {t.contact}
             </Link>
           </div>
 
-          {/* Language Switcher */}
+          {/* Language Switcher & CTAs */}
           <div className="flex items-center space-x-2">
             <Button
               variant="ghost"
@@ -121,12 +120,6 @@ export default function Navigation({ currentLang, onLanguageChange }: Navigation
               </Link>
               <Link href="/about" className="text-gray-700 hover:text-orange-600 font-medium">
                 {t.about}
-              </Link>
-              <Link href="/blog" className="text-gray-700 hover:text-orange-600 font-medium">
-                {t.blog}
-              </Link>
-              <Link href="/legal" className="text-gray-700 hover:text-orange-600 font-medium">
-                {t.legal}
               </Link>
               <Link href="/contact" className="text-gray-700 hover:text-orange-600 font-medium">
                 {t.contact}
