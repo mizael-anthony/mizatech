@@ -1,18 +1,19 @@
 import LayoutWrapper from "@/components/layout-wrapper"
 import AboutPageClient from "@/components/about-page-client"
+import { COMPANY_INFO } from "@/lib/company-constants"
 
 const translations = {
   en: {
     hero: {
-      title: "About Mizatech",
+      title: `About ${COMPANY_INFO.name}`,
       subtitle:
         "We are passionate technologists dedicated to transforming businesses through innovative digital solutions.",
     },
     founder: {
       title: "Meet Our Founder",
-      name: "Mizael",
+      name: COMPANY_INFO.director,
       role: "Founder & Lead Developer",
-      bio: "With over 5 years of experience in software development, Mizael founded Mizatech with a vision to help businesses leverage cutting-edge technology to achieve their goals. His expertise spans full-stack development, AI integration, and scalable system architecture.",
+      bio: `With over 5 years of experience in software development, M. Anthony founded ${COMPANY_INFO.name} with a vision to help businesses leverage cutting-edge technology to achieve their goals. His expertise spans full-stack development, AI integration, and scalable system architecture.`,
       quote:
         '"Technology should empower businesses, not complicate them. That\'s why we focus on creating solutions that are both powerful and intuitive."',
     },
@@ -43,37 +44,6 @@ const translations = {
       description:
         "To be the trusted technology partner for businesses worldwide, known for delivering transformative digital solutions that exceed expectations.",
     },
-    timeline: {
-      title: "Our Journey",
-      subtitle: "Key milestones in our growth and evolution",
-      events: [
-        {
-          year: "2019",
-          title: "Company Founded",
-          description: "Mizatech was established with a focus on web development and digital solutions.",
-        },
-        {
-          year: "2020",
-          title: "Mobile Expansion",
-          description: "Expanded services to include native and cross-platform mobile development.",
-        },
-        {
-          year: "2022",
-          title: "AI Integration",
-          description: "Added artificial intelligence and machine learning capabilities to our service portfolio.",
-        },
-        {
-          year: "2023",
-          title: "API Specialization",
-          description: "Became specialists in API development and system integrations.",
-        },
-        {
-          year: "2024",
-          title: "Global Reach",
-          description: "Serving clients worldwide with a focus on scalable, enterprise-grade solutions.",
-        },
-      ],
-    },
     cta: {
       title: "Let's Work Together",
       subtitle: "Ready to transform your business with innovative technology solutions?",
@@ -82,15 +52,15 @@ const translations = {
   },
   fr: {
     hero: {
-      title: "À Propos de Mizatech",
+      title: `À Propos de ${COMPANY_INFO.name}`,
       subtitle:
         "Nous sommes des technologues passionnés dédiés à transformer les entreprises grâce à des solutions numériques innovantes.",
     },
     founder: {
       title: "Rencontrez Notre Fondateur",
-      name: "Mizael",
+      name: COMPANY_INFO.director,
       role: "Fondateur & Développeur Principal",
-      bio: "Avec plus de 5 ans d'expérience en développement logiciel, Mizael a fondé Mizatech avec la vision d'aider les entreprises à exploiter la technologie de pointe pour atteindre leurs objectifs. Son expertise couvre le développement full-stack, l'intégration IA et l'architecture de systèmes évolutifs.",
+      bio: `Avec plus de 5 ans d'expérience en développement logiciel, M. Anthony a fondé ${COMPANY_INFO.name} avec la vision d'aider les entreprises à exploiter la technologie de pointe pour atteindre leurs objectifs. Son expertise couvre le développement full-stack, l'intégration IA et l'architecture de systèmes évolutifs.`,
       quote:
         '"La technologie devrait autonomiser les entreprises, pas les compliquer. C\'est pourquoi nous nous concentrons sur la création de solutions à la fois puissantes et intuitives."',
     },

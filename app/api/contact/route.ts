@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { COMPANY_INFO } from '@/lib/company-constants'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -8,8 +9,8 @@ export async function POST(request: NextRequest) {
     const { name, email, company, projectType, message } = await request.json()
 
     const { data, error } = await resend.emails.send({
-      from: 'Mizatech Contact Form <onboarding@resend.dev>',
-      to: ['mizaelanthony07@gmail.com'],
+      from: `${COMPANY_INFO.name} Contact Form <onboarding@resend.dev>`,
+      to: [COMPANY_INFO.contactEmail],
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
@@ -32,7 +33,7 @@ export async function POST(request: NextRequest) {
           </div>
           
           <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;">
-            This email was sent from the Mizatech contact form.
+            This email was sent from the ${COMPANY_INFO.name} contact form.
           </div>
         </div>
       `,

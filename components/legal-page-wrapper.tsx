@@ -4,6 +4,7 @@ import { useLanguage } from "@/components/layout-wrapper"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import LegalNavigation from "@/components/legal-navigation"
 import { Shield, Eye, FileText, Scale } from "lucide-react"
+import { COMPANY_INFO } from "@/lib/company-constants"
 
 const translations = {
   en: {
@@ -21,13 +22,11 @@ const translations = {
     companyInfo: {
       title: "Company Information",
       content: {
-        name: "Company Name: Mizatech",
-        registration: "Business Registration: [Registration Number]",
-        address: "Registered Address: Tech District, Innovation City",
-        email: "Email: hello@mizatech.com",
-        phone: "Phone: +1 (555) 123-4567",
-        director: "Managing Director: Mizael",
-        established: "Established: 2019",
+        name: `Company Name : ${COMPANY_INFO.fullName}`,
+        registration: `Company Number : ${COMPANY_INFO.registration}`,
+        address: `Registered Address : ${COMPANY_INFO.address}`,
+        email: `Email : ${COMPANY_INFO.email}`,
+        director: `Managing Director : ${COMPANY_INFO.director}`,
       },
     },
     terms: {
@@ -52,12 +51,12 @@ const translations = {
         intellectual: {
           title: "4. Intellectual Property",
           content:
-            "All content, features, and functionality of our services are owned by Mizatech and are protected by international copyright, trademark, and other intellectual property laws.",
+            `All content, features, and functionality of our services are owned by ${COMPANY_INFO.name} and are protected by international copyright, trademark, and other intellectual property laws.`,
         },
         limitation: {
           title: "5. Limitation of Liability",
           content:
-            "Mizatech shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services.",
+            `${COMPANY_INFO.name} shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services.`,
         },
         termination: {
           title: "6. Termination",
@@ -111,13 +110,13 @@ const translations = {
     disclaimer: {
       title: "Disclaimer",
       content:
-        "The information on this website is provided on an 'as is' basis. Mizatech makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, or availability of the information contained on this website.",
+        `The information on this website is provided on an 'as is' basis. ${COMPANY_INFO.name} makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, or availability of the information contained on this website.`,
     },
     legalContact: {
       title: "Legal Contact",
       content: "For any legal inquiries or concerns regarding these terms, please contact us at:",
-      email: "legal@mizatech.com",
-      address: "Legal Department, Mizatech, Tech District, Innovation City",
+      email: COMPANY_INFO.email,
+      address: `Legal Department, ${COMPANY_INFO.name}, ${COMPANY_INFO.address}`,
     },
   },
   fr: {
@@ -136,13 +135,11 @@ const translations = {
     companyInfo: {
       title: "Informations sur l'Entreprise",
       content: {
-        name: "Nom de l'entreprise : Mizatech",
-        registration: "Immatriculation : [Numéro d'immatriculation]",
-        address: "Adresse du siège : Quartier Tech, Ville Innovation",
-        email: "Email : hello@mizatech.com",
-        phone: "Téléphone : +1 (555) 123-4567",
-        director: "Directeur général : Mizael",
-        established: "Établie en : 2019",
+        name: `Nom de l'entreprise : ${COMPANY_INFO.fullName}`,
+        registration: `Numéro d'identification : ${COMPANY_INFO.registration}`,
+        address: `Adresse du siège : ${COMPANY_INFO.address}`,
+        email: `Email : ${COMPANY_INFO.email}`,
+        director: `Directeur général : ${COMPANY_INFO.director}`,
       },
     },
     terms: {
@@ -167,12 +164,12 @@ const translations = {
         intellectual: {
           title: "4. Propriété Intellectuelle",
           content:
-            "Tout le contenu, les fonctionnalités et la fonctionnalité de nos services appartiennent à Mizatech et sont protégés par les lois internationales sur le droit d'auteur, les marques de commerce et autres propriétés intellectuelles.",
+            `Tout le contenu, les fonctionnalités et la fonctionnalité de nos services appartiennent à ${COMPANY_INFO.name} et sont protégés par les lois internationales sur le droit d'auteur, les marques de commerce et autres propriétés intellectuelles.`,
         },
         limitation: {
           title: "5. Limitation de Responsabilité",
           content:
-            "Mizatech ne sera pas responsable des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs résultant de votre utilisation de nos services.",
+            `${COMPANY_INFO.name} ne sera pas responsable des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs résultant de votre utilisation de nos services.`,
         },
         termination: {
           title: "6. Résiliation",
@@ -226,13 +223,13 @@ const translations = {
     disclaimer: {
       title: "Avertissement",
       content:
-        "Les informations sur ce site web sont fournies 'en l'état'. Mizatech ne fait aucune déclaration ou garantie de quelque nature que ce soit, expresse ou implicite, concernant l'exhaustivité, l'exactitude, la fiabilité ou la disponibilité des informations contenues sur ce site web.",
+        `Les informations sur ce site web sont fournies 'en l'état'. ${COMPANY_INFO.name} ne fait aucune déclaration ou garantie de quelque nature que ce soit, expresse ou implicite, concernant l'exhaustivité, l'exactitude, la fiabilité ou la disponibilité des informations contenues sur ce site web.`,
     },
     legalContact: {
       title: "Contact Légal",
       content: "Pour toute demande légale ou préoccupation concernant ces conditions, veuillez nous contacter à :",
-      email: "legal@mizatech.com",
-      address: "Département Juridique, Mizatech, Quartier Tech, Ville Innovation",
+      email: COMPANY_INFO.email,
+      address: `Département Juridique, ${COMPANY_INFO.name}, ${COMPANY_INFO.address}`,
     },
   },
 }
@@ -274,12 +271,10 @@ export default function LegalPageWrapper() {
                 <CardContent className="p-8 pt-0">
                   <div className="space-y-4">
                     <p className="text-gray-700">{t.companyInfo.content.name}</p>
-                    <p className="text-gray-700">{t.companyInfo.content.registration}</p>
-                    <p className="text-gray-700">{t.companyInfo.content.address}</p>
-                    <p className="text-gray-700">{t.companyInfo.content.email}</p>
-                    <p className="text-gray-700">{t.companyInfo.content.phone}</p>
                     <p className="text-gray-700">{t.companyInfo.content.director}</p>
-                    <p className="text-gray-700">{t.companyInfo.content.established}</p>
+                    <p className="text-gray-700">{t.companyInfo.content.registration}</p>
+                    <p className="text-gray-700">{t.companyInfo.content.email}</p>
+                    <p className="text-gray-700">{t.companyInfo.content.address}</p>
                   </div>
                 </CardContent>
               </Card>

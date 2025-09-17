@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Mail, Phone, MapPin } from "lucide-react"
+import { COMPANY_INFO } from "@/lib/company-constants"
 
 interface FooterProps {
   currentLang: "en" | "fr"
@@ -19,11 +20,7 @@ const translations = {
     privacy: "Privacy Policy",
     terms: "Terms of Service",
     getInTouch: "Get in Touch",
-    email: "mizatech@mizael.pro",
-    phone: "+33 6 12 34 56 78",
-    address: "Tech District, Innovation City",
     rights: "All rights reserved.",
-    tagline: "Building the future, one line of code at a time.",
   },
   fr: {
     company: "Entreprise",
@@ -35,11 +32,7 @@ const translations = {
     privacy: "Politique de Confidentialité",
     terms: "Conditions d'Utilisation",
     getInTouch: "Nous contacter",
-    email: "mizatech@mizael.pro",
-    phone: "+33 6 12 34 56 78",
-    address: "123 Rue de la Technologie, Ville Innovation",
     rights: "Tous droits réservés.",
-    tagline: "Construire l'avenir, une ligne de code à la fois.",
   },
 }
 
@@ -60,9 +53,9 @@ export default function Footer({ currentLang }: FooterProps) {
                 height={28}
                 className="rounded-full"
               />
-              <span className="text-lg font-bold">Mizatech</span>
+              <span className="text-lg font-bold">{COMPANY_INFO.name}</span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">{t.tagline}</p>
+            <p className="text-gray-400 text-sm leading-relaxed">{COMPANY_INFO.tagline[currentLang]}</p>
           </div>
 
           {/* Quick Links */}
@@ -90,15 +83,15 @@ export default function Footer({ currentLang }: FooterProps) {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-orange-400" />
-                <span className="text-gray-400 text-sm">{t.email}</span>
+                <span className="text-gray-400 text-sm">{COMPANY_INFO.email}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-orange-400" />
-                <span className="text-gray-400 text-sm">{t.phone}</span>
+                <span className="text-gray-400 text-sm">{COMPANY_INFO.phone}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-orange-400" />
-                <span className="text-gray-400 text-sm">{t.address}</span>
+                <span className="text-gray-400 text-sm">{COMPANY_INFO.address}</span>
               </div>
             </div>
           </div>
@@ -116,7 +109,7 @@ export default function Footer({ currentLang }: FooterProps) {
               {t.terms}
             </Link>
           </div>
-          <p className="text-gray-400 text-sm text-center">© {new Date().getFullYear()} Mizatech. {t.rights}</p>
+          <p className="text-gray-400 text-sm text-center">© {new Date().getFullYear()} {COMPANY_INFO.name}. {t.rights}</p>
         </div>
       </div>
     </footer>

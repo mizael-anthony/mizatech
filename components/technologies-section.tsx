@@ -63,6 +63,12 @@ const technologiesByCategory = {
       color: "bg-green-50 border-green-200 hover:bg-green-100",
       docsUrl: "https://graphql.org"
     },
+    { 
+      name: "AppWrite", 
+      icon: "https://go-skill-icons.vercel.app/api/icons?i=appwrite",
+      color: "bg-green-50 border-green-200 hover:bg-green-100",
+      docsUrl: "https://appwrite.io"
+    },
   ],
   Database: [
     { 
@@ -76,7 +82,7 @@ const technologiesByCategory = {
       icon: "https://go-skill-icons.vercel.app/api/icons?i=supabase",
       color: "bg-blue-50 border-blue-200 hover:bg-blue-100",
       docsUrl: "https://supabase.com"
-    },
+    }
   ],
   Cloud: [
     { 
@@ -90,26 +96,20 @@ const technologiesByCategory = {
       icon: "https://go-skill-icons.vercel.app/api/icons?i=cloudflare",
       color: "bg-purple-50 border-purple-200 hover:bg-purple-100",
       docsUrl: "https://www.cloudflare.com"
+    },
+    {
+      name: "Digital Ocean",
+      icon: "https://go-skill-icons.vercel.app/api/icons?i=digitalocean",
+      color: "bg-purple-50 border-purple-200 hover:bg-purple-100",
+      docsUrl: "https://www.digitalocean.com"
     }
   ],
-  Collaboration: [
-    { 
-      name: "Notion", 
+  NoCode: [
+    {
+      name: "Notion",
       icon: "https://go-skill-icons.vercel.app/api/icons?i=notion",
       color: "bg-pink-50 border-pink-200 hover:bg-pink-100",
       docsUrl: "https://www.notion.so"
-    },
-    {
-      name: "Figma",
-      icon: "https://go-skill-icons.vercel.app/api/icons?i=figma",
-      color: "bg-blue-50 border-blue-200 hover:bg-blue-100",
-      docsUrl: "https://www.figma.com"
-    },
-    {
-      name: "Discord",
-      icon: "https://go-skill-icons.vercel.app/api/icons?i=discord",
-      color: "bg-blue-50 border-blue-200 hover:bg-blue-100",
-      docsUrl: "https://discord.com"
     },
   ],
 }
