@@ -10,7 +10,7 @@ export const COMPANY_INFO = {
   // Contact information
   email: "mizatech@mizael.pro",
   contactEmail: "mizaelanthony07@gmail.com", // For internal contact form submissions
-  phone: "+261 34 36 457 86",
+  phone: "+33 6 12 34 56 78",
 
   // Address information
   address: "117 South Lexington Street Ste 100 Harrisonville, MO 64701",
