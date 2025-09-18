@@ -8,7 +8,6 @@ interface LegalNavigationProps {
     company: string
     terms: string
     privacy: string
-    cookies: string
   }
 }
 
@@ -16,7 +15,14 @@ export default function LegalNavigation({ navigationTitle, sections }: LegalNavi
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      const headerOffset = 120
+      const elementPosition = element.offsetTop
+      const offsetPosition = elementPosition - headerOffset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      })
     }
   }
 
@@ -44,12 +50,6 @@ export default function LegalNavigation({ navigationTitle, sections }: LegalNavi
             className="block w-full text-left text-gray-600 hover:text-orange-600 transition-colors text-sm py-2 px-3 rounded-lg hover:bg-orange-50"
           >
             {sections.privacy}
-          </button>
-          <button
-            onClick={() => scrollToSection("cookies")}
-            className="block w-full text-left text-gray-600 hover:text-orange-600 transition-colors text-sm py-2 px-3 rounded-lg hover:bg-orange-50"
-          >
-            {sections.cookies}
           </button>
         </nav>
       </CardContent>

@@ -3,7 +3,7 @@
 import { useLanguage } from "@/components/layout-wrapper"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import LegalNavigation from "@/components/legal-navigation"
-import { Shield, Eye, FileText, Scale } from "lucide-react"
+import { Shield, FileText, Scale } from "lucide-react"
 import { COMPANY_INFO } from "@/lib/company-constants"
 
 const translations = {
@@ -17,7 +17,6 @@ const translations = {
       company: "Company Information",
       terms: "Terms of Service",
       privacy: "Privacy Policy",
-      cookies: "Cookie Policy",
     },
     companyInfo: {
       title: "Company Information",
@@ -101,12 +100,6 @@ const translations = {
         },
       },
     },
-    cookies: {
-      title: "Cookie Policy",
-      lastUpdated: "Last updated: December 2024",
-      content:
-        "We use cookies and similar tracking technologies to improve your browsing experience, analyze site traffic, and understand where our visitors are coming from. You can control cookies through your browser settings.",
-    },
     disclaimer: {
       title: "Disclaimer",
       content:
@@ -130,7 +123,6 @@ const translations = {
       company: "Informations sur l'Entreprise",
       terms: "Conditions d'Utilisation",
       privacy: "Politique de Confidentialité",
-      cookies: "Politique des Cookies",
     },
     companyInfo: {
       title: "Informations sur l'Entreprise",
@@ -213,12 +205,6 @@ const translations = {
             "Vous avez le droit d'accéder, de mettre à jour ou de supprimer vos informations personnelles. Vous pouvez également vous opposer ou restreindre certains traitements de vos données.",
         },
       },
-    },
-    cookies: {
-      title: "Politique des Cookies",
-      lastUpdated: "Dernière mise à jour : Décembre 2024",
-      content:
-        "Nous utilisons des cookies et des technologies de suivi similaires pour améliorer votre expérience de navigation, analyser le trafic du site et comprendre d'où viennent nos visiteurs. Vous pouvez contrôler les cookies via les paramètres de votre navigateur.",
     },
     disclaimer: {
       title: "Avertissement",
@@ -326,26 +312,6 @@ export default function LegalPageWrapper() {
                       <p className="text-gray-700 leading-relaxed">{section.content}</p>
                     </div>
                   ))}
-                </CardContent>
-              </Card>
-            </section>
-
-            {/* Cookie Policy */}
-            <section id="cookies">
-              <Card className="border-0 shadow-lg rounded-xl">
-                <CardHeader className="p-8">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                      <Eye className="w-6 h-6 text-orange-600" />
-                    </div>
-                    <div>
-                      <CardTitle className="text-2xl font-bold text-gray-900">{t.cookies.title}</CardTitle>
-                      <p className="text-sm text-gray-500 mt-1">{t.cookies.lastUpdated}</p>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="p-8 pt-0">
-                  <p className="text-gray-700 leading-relaxed">{t.cookies.content}</p>
                 </CardContent>
               </Card>
             </section>
