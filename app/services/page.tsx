@@ -14,12 +14,9 @@ const translations = {
         description:
           "Create powerful, responsive web applications that deliver exceptional user experiences and drive business results.",
         features: [
-          "Custom Web Applications",
-          "E-commerce Solutions",
+          "SaaS Applications",
           "Progressive Web Apps (PWA)",
-          "Content Management Systems",
-          "Performance Optimization",
-          "SEO Implementation",
+          "SEO Optimization",
         ],
       },
       mobile: {
@@ -27,12 +24,9 @@ const translations = {
         description:
           "Build native and cross-platform mobile applications that engage users and expand your reach across all devices.",
         features: [
-          "iOS & Android Development",
-          "Cross-platform Solutions",
-          "UI/UX Design",
-          "App Store Optimization",
-          "Push Notifications",
+          "iOS & Android Apps",
           "Offline Functionality",
+          "App Store Publishing",
         ],
       },
       api: {
@@ -42,22 +36,16 @@ const translations = {
         features: [
           "RESTful API Design",
           "GraphQL Implementation",
-          "API Documentation",
-          "Authentication & Security",
-          "Rate Limiting & Monitoring",
           "Third-party Integrations",
         ],
       },
       ai: {
         title: "AI Integration",
         description:
-          "Leverage artificial intelligence and machine learning to automate processes and gain competitive advantages.",
+          "Integrate powerful Large Language Models and AI services to automate processes and gain competitive advantages.",
         features: [
-          "Machine Learning Models",
-          "Natural Language Processing",
-          "Computer Vision",
+          "LLM Integration",
           "Chatbots & Virtual Assistants",
-          "Predictive Analytics",
           "AI-powered Automation",
         ],
       },
@@ -102,12 +90,9 @@ const translations = {
         description:
           "Créez des applications web puissantes et responsives qui offrent des expériences utilisateur exceptionnelles et génèrent des résultats commerciaux.",
         features: [
-          "Applications Web Personnalisées",
-          "Solutions E-commerce",
+          "Applications SaaS",
           "Applications Web Progressives (PWA)",
-          "Systèmes de Gestion de Contenu",
-          "Optimisation des Performances",
-          "Implémentation SEO",
+          "Optimisation SEO",
         ],
       },
       mobile: {
@@ -115,12 +100,9 @@ const translations = {
         description:
           "Construisez des applications mobiles natives et multiplateformes qui engagent les utilisateurs et étendent votre portée sur tous les appareils.",
         features: [
-          "Développement iOS & Android",
-          "Solutions Multiplateformes",
-          "Design UI/UX",
-          "Optimisation App Store",
-          "Notifications Push",
+          "Apps iOS & Android",
           "Fonctionnalité Hors Ligne",
+          "Publication App Store",
         ],
       },
       api: {
@@ -128,25 +110,19 @@ const translations = {
         description:
           "Concevez et développez des API robustes et évolutives qui alimentent vos applications et permettent des intégrations transparentes.",
         features: [
-          "Conception d'API RESTful",
+          "Design d'API RESTful",
           "Implémentation GraphQL",
-          "Documentation API",
-          "Authentification & Sécurité",
-          "Limitation de Débit & Surveillance",
           "Intégrations Tierces",
         ],
       },
       ai: {
         title: "Intégration IA",
         description:
-          "Exploitez l'intelligence artificielle et l'apprentissage automatique pour automatiser les processus et obtenir des avantages concurrentiels.",
+          "Intégrez de puissants modèles de langage (LLM) et services IA pour automatiser les processus et obtenir des avantages concurrentiels.",
         features: [
-          "Modèles d'Apprentissage Automatique",
-          "Traitement du Langage Naturel",
-          "Vision par Ordinateur",
+          "Intégration LLM",
           "Chatbots & Assistants Virtuels",
-          "Analyses Prédictives",
-          "Automatisation Alimentée par l'IA",
+          "Automatisation Alimentée par IA",
         ],
       },
     },

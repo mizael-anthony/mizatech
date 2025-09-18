@@ -17,7 +17,7 @@ export const COMPANY_INFO = {
 
   // Legal information
   director: "RAKOTOMANGA Mamy Henintsoa Anthony",
-  registration: "37-2192736",
+  registration: "LC014648000",
 
   // Other constants
   tagline: {

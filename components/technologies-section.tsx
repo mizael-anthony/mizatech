@@ -29,13 +29,14 @@ const technologiesByCategory = {
       color: "bg-green-50 border-green-200 hover:bg-green-100",
       docsUrl: "https://www.djangoproject.com"
     },
-        { 
+    { 
       name: "Ruby on Rails", 
       icon: "https://go-skill-icons.vercel.app/api/icons?i=rails",
       color: "bg-red-50 border-red-200 hover:bg-red-100",
       docsUrl: "https://rubyonrails.org"
     },
   ],
+  
   Mobile: [
     { 
       name: "React Native", 
@@ -48,8 +49,15 @@ const technologiesByCategory = {
       icon: "https://go-skill-icons.vercel.app/api/icons?i=expo",
       color: "bg-blue-50 border-blue-200 hover:bg-blue-100",
       docsUrl: "https://expo.dev"
-    }
+    },
+    {
+      name: "Firebase",
+      icon: "https://go-skill-icons.vercel.app/api/icons?i=firebase",
+      color: "bg-blue-50 border-blue-200 hover:bg-blue-100",
+      docsUrl: "https://firebase.google.com"
+    },
   ],
+
   API: [
     { 
       name: "FastAPI", 
@@ -63,7 +71,7 @@ const technologiesByCategory = {
       color: "bg-green-50 border-green-200 hover:bg-green-100",
       docsUrl: "https://graphql.org"
     },
-    { 
+    {
       name: "AppWrite", 
       icon: "https://go-skill-icons.vercel.app/api/icons?i=appwrite",
       color: "bg-green-50 border-green-200 hover:bg-green-100",
@@ -72,7 +80,7 @@ const technologiesByCategory = {
   ],
   Database: [
     { 
-      name: "PostgreSQL", 
+      name: "PostgreSQL",
       icon: "https://go-skill-icons.vercel.app/api/icons?i=postgresql",
       color: "bg-orange-50 border-orange-200 hover:bg-orange-100",
       docsUrl: "https://www.postgresql.org"
@@ -82,7 +90,13 @@ const technologiesByCategory = {
       icon: "https://go-skill-icons.vercel.app/api/icons?i=supabase",
       color: "bg-blue-50 border-blue-200 hover:bg-blue-100",
       docsUrl: "https://supabase.com"
-    }
+    },
+    { 
+      name: "MongoDB", 
+      icon: "https://go-skill-icons.vercel.app/api/icons?i=mongodb",
+      color: "bg-blue-50 border-blue-200 hover:bg-blue-100",
+      docsUrl: "https://mongodb.com"
+    },
   ],
   Cloud: [
     { 
@@ -104,12 +118,24 @@ const technologiesByCategory = {
       docsUrl: "https://www.digitalocean.com"
     }
   ],
-  NoCode: [
+  Languages: [
     {
-      name: "Notion",
-      icon: "https://go-skill-icons.vercel.app/api/icons?i=notion",
+      name: "Python",
+      icon: "https://go-skill-icons.vercel.app/api/icons?i=python",
       color: "bg-pink-50 border-pink-200 hover:bg-pink-100",
-      docsUrl: "https://www.notion.so"
+      docsUrl: "https://www.python.org"
+    },
+    { 
+      name: "Ruby", 
+      icon: "https://go-skill-icons.vercel.app/api/icons?i=ruby",
+      color: "bg-blue-50 border-blue-200 hover:bg-blue-100",
+      docsUrl: "https://www.ruby-lang.org"
+    },
+    { 
+      name: "TypeScript", 
+      icon: "https://go-skill-icons.vercel.app/api/icons?i=typescript",
+      color: "bg-blue-50 border-blue-200 hover:bg-blue-100",
+      docsUrl: "https://www.typescriptlang.org"
     },
   ],
 }

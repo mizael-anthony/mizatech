@@ -31,7 +31,7 @@ const translations = {
       },
       ai: {
         title: "AI Integration",
-        description: "Intelligent solutions that leverage machine learning and artificial intelligence.",
+        description: "Intelligent solutions that integrate Large Language Models (LLMs) and AI services into your applications.",
       },
     },
     stats: {
